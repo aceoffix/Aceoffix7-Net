@@ -131,9 +131,9 @@
 
             $('#taxForm').submit(function (e) {
                 e.preventDefault();
-                $('#taxModal').fadeOut(300);
-
-                aceoffixctrl.Enabled = true;
+                $('#taxModal').fadeOut(300, function () {
+                    aceoffixctrl.Enabled = true;
+                });
 
                 aceoffixctrl.word.SetValueToDataRegion('ACE_name', $('#name').val());
                 aceoffixctrl.word.SetValueToDataRegion('ACE_gender', $('input[name="gender"]:checked').val());
@@ -152,8 +152,9 @@
 
             $('#applicationForm').submit(function (e) {
                 e.preventDefault();
-                $('#applicationModal').fadeOut(300);
-                aceoffixctrl.Enabled = true;
+                $('#applicationModal').fadeOut(300, function () {  
+                    aceoffixctrl.Enabled = true;  
+                });
 
                 aceoffixctrl.word.SetValueToDataRegion('ACE_taxpayer_name', $('#applicantName').val());
 
@@ -176,7 +177,9 @@
 
             $('.modal-overlay').click(function (e) {
                 if ($(e.target).hasClass('modal-overlay')) {
-                    $(this).fadeOut(300);
+                    $(this).fadeOut(300, function () {  
+                        aceoffixctrl.Enabled = true;  
+                    });
                 }
             });
         });

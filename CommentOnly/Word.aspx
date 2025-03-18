@@ -13,7 +13,7 @@
         }
 
         function newComment() {
-           aceoffixctrl.InsertComment();
+            aceoffixctrl.word.InsertComment();
         }
 
         function OnAceoffixCtrlInit() {
