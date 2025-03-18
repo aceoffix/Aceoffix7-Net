@@ -1,0 +1,1287 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DF7EF9E-8505-4132-BC48-766A3B484F10}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aceoffix7_Net</RootNamespace>
+    <AssemblyName>Aceoffix7-Net</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aceoffix7, Version=7.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Acesoft.AceoffixNet.7.0.1.1\lib\net40\Aceoffix7.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.119.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddWaterMark\AddWaterMark.aspx" />
+    <Content Include="AfterDocOpened\Word.aspx" />
+    <Content Include="ApplicationForm\css\style.css" />
+    <Content Include="ApplicationForm\Word.aspx" />
+    <Content Include="BeforeAndAfterSave\SaveFile.aspx" />
+    <Content Include="BeforeAndAfterSave\Word.aspx" />
+    <Content Include="CallParentFunction\index.html" />
+    <Content Include="CallParentFunction\Word.aspx" />
+    <Content Include="CommandCtrl\Word.aspx" />
+    <Content Include="CommentOnly\SaveFile.aspx" />
+    <Content Include="CommentOnly\Word.aspx" />
+    <Content Include="CommentsList\SaveFile.aspx" />
+    <Content Include="CommentsList\Word.aspx" />
+    <Content Include="ConcurrencyCtrl\clearCurrentEditor.aspx" />
+    <Content Include="ConcurrencyCtrl\css\style.css" />
+    <Content Include="ConcurrencyCtrl\Default.aspx" />
+    <Content Include="ConcurrencyCtrl\detectCurrentEditor.aspx" />
+    <Content Include="ConcurrencyCtrl\SaveFile.aspx" />
+    <Content Include="ConcurrencyCtrl\Word.aspx" />
+    <Content Include="ConcurrencyCtrl\Word2.aspx" />
+    <Content Include="ControlBars\OpenWord.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style2.css" />
+    <Content Include="css\style3.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="CustomToolButton\Word.aspx" />
+    <Content Include="DataBase\OpenStream.aspx" />
+    <Content Include="DataBase\SaveFile.aspx" />
+    <Content Include="DataBase\Stream.aspx" />
+    <Content Include="DataRegionCreate\DataRegionCreate.aspx" />
+    <Content Include="DataRegionEdit\SaveFile.aspx" />
+    <Content Include="DataRegionEdit\Word.aspx" />
+    <Content Include="DataRegionFill2\DataRegionFill2.aspx" />
+    <Content Include="DataRegionFill\DataRegionFill.aspx" />
+    <Content Include="DataRegionTable\Default.aspx" />
+    <Content Include="DataRegionTable\SaveData.aspx" />
+    <Content Include="DataRegionText\Default.aspx" />
+    <Content Include="DataTagEdit\SaveFile.aspx" />
+    <Content Include="DataTagEdit\Word.aspx" />
+    <Content Include="DefinedNameCell\ExcelFill.aspx" />
+    <Content Include="DefinedNameTable\Default.aspx" />
+    <Content Include="DefinedNameTable\ExcelFill.aspx" />
+    <Content Include="DefinedNameTable\ExcelFill2.aspx" />
+    <Content Include="DefinedNameTable\ExcelFill4.aspx" />
+    <Content Include="DefinedNameTable\ExcelFill5.aspx" />
+    <Content Include="DefinedNameTable\ExcelFill6.aspx" />
+    <Content Include="DefinedNameTable\SaveData.aspx" />
+    <Content Include="DisableCopyOut\Word.aspx" />
+    <Content Include="DivMessage\Word.aspx" />
+    <Content Include="DrawExcel\Excel.aspx" />
+    <Content Include="ExaminationPaper\Compose2.aspx" />
+    <Content Include="ExaminationPaper\Default.aspx" />
+    <Content Include="ExaminationPaper\Edit.aspx" />
+    <Content Include="ExaminationPaper\OpenFile.aspx" />
+    <Content Include="ExaminationPaper\SaveFile.aspx" />
+    <Content Include="ExcelAdjustRC\Excel.aspx" />
+    <Content Include="ExcelDisableRight\Excel.aspx" />
+    <Content Include="ExcelFill2\ExcelFill2.aspx" />
+    <Content Include="ExcelInsertImage\doc\logo.png" />
+    <Content Include="ExcelFill\ExcelFill.aspx" />
+    <Content Include="ExcelInsertImage\Excel.aspx" />
+    <Content Include="ExcelTable\Table.aspx" />
+    <Content Include="ExtractImage\SaveData.aspx" />
+    <Content Include="ExtractImage\Word.aspx" />
+    <Content Include="FileMakerConvertPDFs\Convert.aspx" />
+    <Content Include="FileMakerConvertPDFs\Default.aspx" />
+    <Content Include="FileMakerConvertPDFs\Edit.aspx" />
+    <Content Include="FileMakerConvertPDFs\SaveMaker.aspx" />
+    <Content Include="FileMakerModify\Default.aspx" />
+    <Content Include="FileMakerModify\FileMakerModify.aspx" />
+    <Content Include="FileMakerModify\SaveMaker.aspx" />
+    <Content Include="FileMakerPDF\Default.aspx" />
+    <Content Include="FileMakerPDF\FileMakerPDF.aspx" />
+    <Content Include="FileMakerPDF\SaveMaker.aspx" />
+    <Content Include="FileMakerPrintFiles\Default.aspx" />
+    <Content Include="FileMakerPrintFiles\FileMaker.aspx" />
+    <Content Include="FileMakerPrintFiles\Preview.aspx" />
+    <Content Include="FileMakerSingle\Default.aspx" />
+    <Content Include="FileMakerSingle\FileMakerSingle.aspx" />
+    <Content Include="FileMakerSingle\SaveMaker.aspx" />
+    <Content Include="FileMakerToPDF\Default.aspx" />
+    <Content Include="FileMakerToPDF\FileMakerToPDF.aspx" />
+    <Content Include="FileMakerToPDF\SaveMaker.aspx" />
+    <Content Include="FileMaker\Default.aspx" />
+    <Content Include="FileMaker\FileMaker.aspx" />
+    <Content Include="FileMaker\SaveMaker.aspx" />
+    <Content Include="font\css\font-awesome.css" />
+    <Content Include="font\css\font-awesome.min.css" />
+    <Content Include="font\fonts\fontawesome-webfont.svg" />
+    <Content Include="FormToDataRegions\css\style.css" />
+    <Content Include="FormToDataRegions\SaveFile.aspx" />
+    <Content Include="FormToDataRegions\Word.aspx" />
+    <Content Include="GetParentParamValue\Word.aspx" />
+    <Content Include="images\a1.gif" />
+    <Content Include="images\a2.gif" />
+    <Content Include="images\a3.gif" />
+    <Content Include="images\a4.gif" />
+    <Content Include="images\aaa.gif" />
+    <Content Include="images\arrow.gif" />
+    <Content Include="images\arrow2.gif" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\arrow_px_up.gif" />
+    <Content Include="images\ban-bg.jpg" />
+    <Content Include="images\ban3.png" />
+    <Content Include="images\ban5.png" />
+    <Content Include="images\banner-bg.jpg" />
+    <Content Include="images\border-img.jpg" />
+    <Content Include="images\bt.gif" />
+    <Content Include="images\bt2.gif" />
+    <Content Include="images\bt3.gif" />
+    <Content Include="images\close.png" />
+    <Content Include="images\college-bannerbg.jpg" />
+    <Content Include="images\cont-3imgb.jpg" />
+    <Content Include="images\cont-3imgp.jpg" />
+    <Content Include="images\cont-3imgt.jpg" />
+    <Content Include="images\contlist-bor.jpg" />
+    <Content Include="images\contlist-bor2.jpg" />
+    <Content Include="images\contlist-bor3.jpg" />
+    <Content Include="images\css%282%29.css" />
+    <Content Include="images\csstg.css" />
+    <Content Include="images\csstg2.css" />
+    <Content Include="images\dew.jpg" />
+    <Content Include="images\dialog.css" />
+    <Content Include="images\doc.jpg" />
+    <Content Include="images\h2-img.jpg" />
+    <Content Include="images\h2-img2.jpg" />
+    <Content Include="images\header-bg.jpg" />
+    <Content Include="images\header-bg2.jpg" />
+    <Content Include="images\home.png" />
+    <Content Include="images\homebanner-bg1.jpg" />
+    <Content Include="images\img_1.jpg" />
+    <Content Include="images\img_2.jpg" />
+    <Content Include="images\img_3.jpg" />
+    <Content Include="images\img_4.jpg" />
+    <Content Include="images\img_5.jpg" />
+    <Content Include="images\img_6.jpg" />
+    <Content Include="images\img_bg_1.jpg" />
+    <Content Include="images\img_bg_2.jpg" />
+    <Content Include="images\img_bg_3.jpg" />
+    <Content Include="images\img_blanklogo.gif" />
+    <Content Include="images\img_blanklogo_1.gif" />
+    <Content Include="images\img_blanklogo_10.gif" />
+    <Content Include="images\img_blanklogo_11.gif" />
+    <Content Include="images\img_blanklogo_14.gif" />
+    <Content Include="images\img_blanklogo_15.gif" />
+    <Content Include="images\img_blanklogo_16.gif" />
+    <Content Include="images\img_blanklogo_2.gif" />
+    <Content Include="images\img_blanklogo_3.gif" />
+    <Content Include="images\img_f_13.gif" />
+    <Content Include="images\img_f_14.gif" />
+    <Content Include="images\img_f_14.jpg" />
+    <Content Include="images\img_f_15.gif" />
+    <Content Include="images\img_f_16.gif" />
+    <Content Include="images\img_f_22.gif" />
+    <Content Include="images\img_f_23.gif" />
+    <Content Include="images\img_f_24.gif" />
+    <Content Include="images\img_f_25.gif" />
+    <Content Include="images\img_f_26.gif" />
+    <Content Include="images\img_f_38.gif" />
+    <Content Include="images\img_f_39.gif" />
+    <Content Include="images\index.html" />
+    <Content Include="images\index2_31.gif" />
+    <Content Include="images\index2_33.gif" />
+    <Content Include="images\leftli.jpg" />
+    <Content Include="images\llsh.gif" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\more.jpg" />
+    <Content Include="images\newword.gif" />
+    <Content Include="images\oa1.png" />
+    <Content Include="images\office-1.jpg" />
+    <Content Include="images\office-1.png" />
+    <Content Include="images\office-11.png" />
+    <Content Include="images\office-13.png" />
+    <Content Include="images\office-2.jpg" />
+    <Content Include="images\office-2.png" />
+    <Content Include="images\office-22.png" />
+    <Content Include="images\office-3.jpg" />
+    <Content Include="images\office-3.png" />
+    <Content Include="images\office-33.png" />
+    <Content Include="images\office-4.jpg" />
+    <Content Include="images\office-5.jpg" />
+    <Content Include="images\office-5.png" />
+    <Content Include="images\office-bg1.jpg" />
+    <Content Include="images\office-bg2.jpg" />
+    <Content Include="images\office-bg3.jpg" />
+    <Content Include="images\office-bg4.jpg" />
+    <Content Include="images\office-bg5.jpg" />
+    <Content Include="images\office1.png" />
+    <Content Include="images\office11.png" />
+    <Content Include="images\office2.png" />
+    <Content Include="images\office22.png" />
+    <Content Include="images\office3.png" />
+    <Content Include="images\office33.png" />
+    <Content Include="images\pdf.jpg" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\person_1.jpg" />
+    <Content Include="images\person_2.jpg" />
+    <Content Include="images\person_3.jpg" />
+    <Content Include="images\return.gif" />
+    <Content Include="images\selectSeal.htm" />
+    <Content Include="images\selectTemplate.htm" />
+    <Content Include="images\Spacer.gif" />
+    <Content Include="images\swfobject.js" />
+    <Content Include="images\trans_pixel.gif" />
+    <Content Include="images\ul-head.jpg" />
+    <Content Include="images\ulleft.jpg" />
+    <Content Include="images\xls.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="index.html" />
+    <Content Include="InsertImageSetSize\doc\image1.png" />
+    <Content Include="InsertImageSetSize\doc\image2.png" />
+    <Content Include="InsertImageSetSize\Word.aspx" />
+    <Content Include="InsertImgForJs\doc\logo.png" />
+    <Content Include="InsertImgForJs\Word.aspx" />
+    <Content Include="InsertPageBreak2\SaveFile.aspx" />
+    <Content Include="InsertPageBreak2\Word.aspx" />
+    <Content Include="JsControlBars\Word.aspx" />
+    <Content Include="JsInsertWaterMark\Word.aspx" />
+    <Content Include="js\belatedPNG.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\fancybox\blank.gif" />
+    <Content Include="js\fancybox\fancybox_loading.gif" />
+    <Content Include="js\fancybox\fancybox_loading_402x.gif" />
+    <Content Include="js\fancybox\fancybox_overlay.png" />
+    <Content Include="js\fancybox\fancybox_sprite.png" />
+    <Content Include="js\fancybox\fancybox_sprite_402x.png" />
+    <Content Include="js\fancybox\jquery.fancybox.css" />
+    <Content Include="js\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="js\google_map.js" />
+    <Content Include="js\jquery-1.8.2.min.js" />
+    <Content Include="js\jquery-3.6.0.min.js" />
+    <Content Include="js\jquery.countTo.js" />
+    <Content Include="js\jquery.cslider.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.easypiechart.min.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.nav.js" />
+    <Content Include="js\jquery.stellar.min.js" />
+    <Content Include="js\jquery.waypoints.min.js" />
+    <Content Include="js\magnific-popup-options.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr-2.6.2.min.js" />
+    <Content Include="js\modernizr-latest.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="MergeExcelCell\Default.aspx" />
+    <Content Include="MergeWordCell\Default.aspx" />
+    <Content Include="OpenWord\OpenWord.aspx" />
+    <Content Include="ReadOnly\OpenWord.aspx" />
+    <Content Include="RevisionOnly\SaveFile.aspx" />
+    <Content Include="RevisionOnly\Word.aspx" />
+    <Content Include="RevisionsList\SaveFile.aspx" />
+    <Content Include="RevisionsList\Word.aspx" />
+    <Content Include="SaveAndSearch\Default.aspx" />
+    <Content Include="SaveAndSearch\Edit.aspx" />
+    <Content Include="SaveAndSearch\SaveFile.aspx" />
+    <Content Include="SaveAndSearch\css\style.css" />
+    <Content Include="SaveAsHtml\SaveFile.aspx" />
+    <Content Include="SaveAsHtml\Word.aspx" />
+    <Content Include="SaveAsPDF\SaveFile.aspx" />
+    <Content Include="SaveAsPDF\WordToPDF.aspx" />
+    <Content Include="SaveDataAndFile\SaveData.aspx" />
+    <Content Include="SaveDataAndFile\SaveFile.aspx" />
+    <Content Include="SaveDataAndFile\Word.aspx" />
+    <Content Include="SaveFirstPageAsImg\SaveFile.aspx" />
+    <Content Include="SaveFirstPageAsImg\Word.aspx" />
+    <Content Include="SaveReturnValue\SaveFile.aspx" />
+    <Content Include="SaveReturnValue\SaveReturnValue.aspx" />
+    <Content Include="SendParameters\SaveFile.aspx" />
+    <Content Include="SendParameters\SendParameters.aspx" />
+    <Content Include="SetDrByUserWord2\Default.aspx" />
+    <Content Include="SetDrByUserWord2\SaveData.aspx" />
+    <Content Include="SetDrByUserWord2\Word.aspx" />
+    <Content Include="SetDrByUserWord\Default.aspx" />
+    <Content Include="SetDrByUserWord\SaveFile.aspx" />
+    <Content Include="SetDrByUserWord\Word.aspx" />
+    <Content Include="SetExcelCellBorder\Default.aspx" />
+    <Content Include="SetExcelCellText\Default.aspx" />
+    <Content Include="SetXlsTableByUser\Default.aspx" />
+    <Content Include="SetXlsTableByUser\Excel.aspx" />
+    <Content Include="SetXlsTableByUser\SaveFile.aspx" />
+    <Content Include="SimpleExcel\Excel.aspx" />
+    <Content Include="SimpleExcel\SaveFile.aspx" />
+    <Content Include="SimplePPT\PPT.aspx" />
+    <Content Include="SimplePPT\SaveFile.aspx" />
+    <Content Include="SimpleWord\SaveFile.aspx" />
+    <Content Include="SimpleWord\Word1.aspx" />
+    <Content Include="SimpleWord\Word.aspx" />
+    <Content Include="SplitWord\SaveData.aspx" />
+    <Content Include="SplitWord\Word.aspx" />
+    <Content Include="SubmitExcel\SaveData.aspx" />
+    <Content Include="SubmitExcel\SubmitExcel.aspx" />
+    <Content Include="SubmitWord\SaveData.aspx" />
+    <Content Include="SubmitWord\SubmitWord.aspx" />
+    <Content Include="SwitchFile\index.html" />
+    <Content Include="SwitchFile\Word.aspx" />
+    <Content Include="TitleText\Word.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WordAddBKMK\Word.aspx" />
+    <Content Include="WordCompare\Compare.aspx" />
+    <Content Include="WordCreateTable\CreateTable.aspx" />
+    <Content Include="WordDataTag2\DataTag.aspx" />
+    <Content Include="WordDataTag\DataTag.aspx" />
+    <Content Include="WordDeleteRow\WordTable.aspx" />
+    <Content Include="WordDisableRight\Word.aspx" />
+    <Content Include="WordGetSelection\Word.aspx" />
+    <Content Include="WordLocateBKMK\Word.aspx" />
+    <Content Include="WordParagraph\doc\logo.png" />
+    <Content Include="WordParagraph\Word.aspx" />
+    <Content Include="WordResExcel\doc\image1.png" />
+    <Content Include="WordResExcel\Word.aspx" />
+    <Content Include="WordResImage\doc\image1.png" />
+    <Content Include="WordResImage\doc\image2.png" />
+    <Content Include="WordResImage\Word.aspx" />
+    <Content Include="WordResWord\Word.aspx" />
+    <Content Include="WordSalaryBill\Compose.aspx" />
+    <Content Include="WordSalaryBill\Default.aspx" />
+    <Content Include="WordSalaryBill\Edit.aspx" />
+    <Content Include="WordSalaryBill\SaveData.aspx" />
+    <Content Include="WordSalaryBill\View.aspx" />
+    <Content Include="WordSetTable\WordSetTable.aspx" />
+    <Content Include="WordTableBorder\TableBorder.aspx" />
+    <Content Include="WordTableSetImg\doc\logo.png" />
+    <Content Include="WordTableSetImg\WordTable.aspx" />
+    <Content Include="WordTable\WordTable.aspx" />
+    <Content Include="WordTextBox\doc\logo.png" />
+    <Content Include="WordTextBox\TextBoxFill.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddWaterMark\AddWaterMark.aspx.cs">
+      <DependentUpon>AddWaterMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterDocOpened\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeforeAndAfterSave\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeforeAndAfterSave\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallParentFunction\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommandCtrl\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentOnly\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentOnly\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentsList\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentsList\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\clearCurrentEditor.aspx.cs">
+      <DependentUpon>clearCurrentEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\detectCurrentEditor.aspx.cs">
+      <DependentUpon>detectCurrentEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcurrencyCtrl\Word2.aspx.cs">
+      <DependentUpon>Word2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlBars\OpenWord.aspx.cs">
+      <DependentUpon>OpenWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomToolButton\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBase\OpenStream.aspx.cs">
+      <DependentUpon>OpenStream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBase\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBase\Stream.aspx.cs">
+      <DependentUpon>Stream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionCreate\DataRegionCreate.aspx.cs">
+      <DependentUpon>DataRegionCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionEdit\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionEdit\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionFill2\DataRegionFill2.aspx.cs">
+      <DependentUpon>DataRegionFill2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionFill\DataRegionFill.aspx.cs">
+      <DependentUpon>DataRegionFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionTable\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionTable\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataRegionText\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataTagEdit\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataTagEdit\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameCell\ExcelFill.aspx.cs">
+      <DependentUpon>ExcelFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\ExcelFill.aspx.cs">
+      <DependentUpon>ExcelFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\ExcelFill2.aspx.cs">
+      <DependentUpon>ExcelFill2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\ExcelFill4.aspx.cs">
+      <DependentUpon>ExcelFill4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\ExcelFill5.aspx.cs">
+      <DependentUpon>ExcelFill5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\ExcelFill6.aspx.cs">
+      <DependentUpon>ExcelFill6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefinedNameTable\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisableCopyOut\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DivMessage\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrawExcel\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationPaper\Compose2.aspx.cs">
+      <DependentUpon>Compose2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationPaper\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationPaper\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationPaper\OpenFile.aspx.cs">
+      <DependentUpon>OpenFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExaminationPaper\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelAdjustRC\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelDisableRight\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelFill2\ExcelFill2.aspx.cs">
+      <DependentUpon>ExcelFill2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelFill\ExcelFill.aspx.cs">
+      <DependentUpon>ExcelFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelInsertImage\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelTable\Table.aspx.cs">
+      <DependentUpon>Table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtractImage\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtractImage\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerConvertPDFs\Convert.aspx.cs">
+      <DependentUpon>Convert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerConvertPDFs\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerConvertPDFs\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerConvertPDFs\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerModify\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerModify\FileMakerModify.aspx.cs">
+      <DependentUpon>FileMakerModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerModify\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPDF\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPDF\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileMakerPDF\FileMakerPDF.aspx.cs">
+      <DependentUpon>FileMakerPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPDF\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPrintFiles\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPrintFiles\FileMaker.aspx.cs">
+      <DependentUpon>FileMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerPrintFiles\Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerSingle\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerSingle\FileMakerSingle.aspx.cs">
+      <DependentUpon>FileMakerSingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerSingle\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerToPDF\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerToPDF\FileMakerToPDF.aspx.cs">
+      <DependentUpon>FileMakerToPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMakerToPDF\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMaker\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMaker\FileMaker.aspx.cs">
+      <DependentUpon>FileMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileMaker\SaveMaker.aspx.cs">
+      <DependentUpon>SaveMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormToDataRegions\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormToDataRegions\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetParentParamValue\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertImageSetSize\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertImgForJs\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertPageBreak2\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertPageBreak2\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsControlBars\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsInsertWaterMark\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MergeExcelCell\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MergeWordCell\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpenWord\OpenWord.aspx.cs">
+      <DependentUpon>OpenWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnly\OpenWord.aspx.cs">
+      <DependentUpon>OpenWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevisionOnly\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevisionOnly\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevisionsList\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevisionsList\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAndSearch\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAndSearch\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAndSearch\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAsHtml\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAsHtml\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAsPDF\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveAsPDF\WordToPDF.aspx.cs">
+      <DependentUpon>WordToPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveDataAndFile\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveDataAndFile\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveDataAndFile\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveFirstPageAsImg\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveFirstPageAsImg\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveReturnValue\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaveReturnValue\SaveReturnValue.aspx.cs">
+      <DependentUpon>SaveReturnValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendParameters\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendParameters\SendParameters.aspx.cs">
+      <DependentUpon>SendParameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord2\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord2\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetDrByUserWord\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetExcelCellBorder\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetExcelCellText\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetXlsTableByUser\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetXlsTableByUser\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetXlsTableByUser\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleExcel\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleExcel\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimplePPT\PPT.aspx.cs">
+      <DependentUpon>PPT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimplePPT\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleWord\SaveFile.aspx.cs">
+      <DependentUpon>SaveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleWord\Word1.aspx.cs">
+      <DependentUpon>Word1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleWord\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SplitWord\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SplitWord\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitExcel\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitExcel\SubmitExcel.aspx.cs">
+      <DependentUpon>SubmitExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitWord\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitWord\SubmitWord.aspx.cs">
+      <DependentUpon>SubmitWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SwitchFile\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TitleText\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordAddBKMK\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordCompare\Compare.aspx.cs">
+      <DependentUpon>Compare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordCreateTable\CreateTable.aspx.cs">
+      <DependentUpon>CreateTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordDataTag2\DataTag.aspx.cs">
+      <DependentUpon>DataTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordDataTag\DataTag.aspx.cs">
+      <DependentUpon>DataTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordDeleteRow\WordTable.aspx.cs">
+      <DependentUpon>WordTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordDisableRight\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordGetSelection\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordLocateBKMK\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordParagraph\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordResExcel\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordResImage\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordResWord\Word.aspx.cs">
+      <DependentUpon>Word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSalaryBill\Compose.aspx.cs">
+      <DependentUpon>Compose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSalaryBill\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSalaryBill\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSalaryBill\SaveData.aspx.cs">
+      <DependentUpon>SaveData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSalaryBill\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSetTable\WordSetTable.aspx.cs">
+      <DependentUpon>WordSetTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordTableBorder\TableBorder.aspx.cs">
+      <DependentUpon>TableBorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordTableSetImg\WordTable.aspx.cs">
+      <DependentUpon>WordTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordTable\WordTable.aspx.cs">
+      <DependentUpon>WordTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordTextBox\TextBoxFill.aspx.cs">
+      <DependentUpon>TextBoxFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\style.css.map" />
+    <Content Include="js\fancybox\Descr.WD3" />
+    <Content Include="images\seal01.esf" />
+    <Content Include="images\seal02.esf" />
+    <Content Include="images\seal03.esf" />
+    <Content Include="images\sign01.esf" />
+    <Content Include="images\sign02.esf" />
+    <Content Include="images\sign03.esf" />
+    <Content Include="font\fonts\fontawesome-webfont.eot" />
+    <Content Include="font\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font\fonts\fontawesome-webfont.woff" />
+    <Content Include="font\fonts\FontAwesome.otf" />
+    <Content Include="font\less\bordered-pulled.less" />
+    <Content Include="font\less\core.less" />
+    <Content Include="font\less\fixed-width.less" />
+    <Content Include="font\less\font-awesome.less" />
+    <Content Include="font\less\icons.less" />
+    <Content Include="font\less\larger.less" />
+    <Content Include="font\less\list.less" />
+    <Content Include="font\less\mixins.less" />
+    <Content Include="font\less\path.less" />
+    <Content Include="font\less\rotated-flipped.less" />
+    <Content Include="font\less\spinning.less" />
+    <Content Include="font\less\stacked.less" />
+    <Content Include="font\less\variables.less" />
+    <Content Include="font\scss\font-awesome.scss" />
+    <Content Include="font\scss\_bordered-pulled.scss" />
+    <Content Include="font\scss\_core.scss" />
+    <Content Include="font\scss\_fixed-width.scss" />
+    <Content Include="font\scss\_icons.scss" />
+    <Content Include="font\scss\_larger.scss" />
+    <Content Include="font\scss\_list.scss" />
+    <Content Include="font\scss\_mixins.scss" />
+    <Content Include="font\scss\_path.scss" />
+    <Content Include="font\scss\_rotated-flipped.scss" />
+    <Content Include="font\scss\_spinning.scss" />
+    <Content Include="font\scss\_stacked.scss" />
+    <Content Include="font\scss\_variables.scss" />
+    <Content Include="DataRegionEdit\doc\test.docx" />
+    <Content Include="DivMessage\doc\test.docx" />
+    <Content Include="ApplicationForm\doc\test.docx" />
+    <Content Include="FormToDataRegions\doc\test.docx" />
+    <Content Include="FileMakerToPDF\doc\template.docx" />
+    <Content Include="SaveReturnValue\doc\test.docx" />
+    <Content Include="OpenWord\doc\test.docx" />
+    <Content Include="DataRegionFill\doc\test.docx" />
+    <Content Include="ExcelFill\doc\test.xlsx" />
+    <Content Include="CommandCtrl\doc\test.docx" />
+    <Content Include="CustomToolButton\doc\test.docx" />
+    <Content Include="AfterDocOpened\doc\test.docx" />
+    <Content Include="JsControlBars\doc\test.docx" />
+    <Content Include="ExcelTable\doc\test.xlsx" />
+    <Content Include="BeforeAndAfterSave\doc\test.docx" />
+    <Content Include="ExcelDisableRight\doc\test.xlsx" />
+    <Content Include="CommentOnly\doc\test.docx" />
+    <Content Include="CallParentFunction\doc\test.docx" />
+    <Content Include="GetParentParamValue\doc\test.docx" />
+    <Content Include="App_Data\DataBase.db" />
+    <Content Include="AddWaterMark\doc\test.docx" />
+    <Content Include="DataRegionCreate\doc\test.docx" />
+    <Content Include="DataRegionTable\doc\test.docx" />
+    <Content Include="DataRegionText\doc\test.docx" />
+    <Content Include="MergeWordCell\doc\test.docx" />
+    <Content Include="MergeExcelCell\doc\test.xlsx" />
+    <Content Include="DataRegionFill2\doc\test.docx" />
+    <Content Include="ExcelFill2\doc\test.xlsx" />
+    <Content Include="DataTagEdit\doc\test.docx" />
+    <Content Include="DefinedNameCell\doc\test.xlsx" />
+    <Content Include="DefinedNameTable\doc\temp1.xlsx" />
+    <Content Include="DefinedNameTable\doc\temp2.xlsx" />
+    <Content Include="DefinedNameTable\doc\test.xlsx" />
+    <Content Include="DefinedNameTable\doc\test4.xlsx" />
+    <Content Include="FileMakerPDF\doc\template.docx" />
+    <Content Include="CommentsList\doc\test.docx" />
+    <Content Include="ExcelAdjustRC\doc\test.xlsx" />
+    <Content Include="InsertPageBreak2\doc\test1.docx" />
+    <Content Include="InsertPageBreak2\doc\test2.docx" />
+    <Content Include="ExcelInsertImage\doc\test.xlsx" />
+    <Content Include="ExtractImage\doc\test.docx" />
+    <Content Include="DisableCopyOut\doc\test.docx" />
+    <Content Include="InsertImageSetSize\doc\test.docx" />
+    <Content Include="FileMakerSingle\doc\template.docx" />
+    <Content Include="FileMakerModify\doc\template.docx" />
+    <Content Include="FileMaker\doc\template.docx" />
+    <Content Include="FileMakerConvertPDFs\doc\Aceoffix Product Overview.docx" />
+    <Content Include="FileMakerConvertPDFs\doc\Aceoffix Trial Limits.docx" />
+    <Content Include="FileMakerConvertPDFs\doc\Aceoffix License Policy.docx" />
+    <Content Include="FileMakerConvertPDFs\doc\Introduction to Aceoffix.docx" />
+    <Content Include="FileMakerPrintFiles\doc\Aceoffix License Policy.docx" />
+    <Content Include="FileMakerPrintFiles\doc\Aceoffix Product Overview.docx" />
+    <Content Include="FileMakerPrintFiles\doc\Aceoffix Trial Limits.docx" />
+    <Content Include="FileMakerPrintFiles\doc\Introduction to Aceoffix.docx" />
+    <Content Include="DrawExcel\doc\test.xlsx" />
+    <Content Include="App_Data\ExaminationPaper.db" />
+    <Content Include="ExaminationPaper\doc\test.docx" />
+    <Content Include="App_Data\WordSalaryBill.db" />
+    <Content Include="App_Data\SaveAndSearch.db" />
+    <Content Include="InsertImgForJs\doc\test.docx" />
+    <Content Include="JsInsertWaterMark\doc\test.docx" />
+    <Content Include="App_Data\ConcurrencyCtrl.db" />
+    <Content Include="ConcurrencyCtrl\doc\001.docx" />
+    <Content Include="ConcurrencyCtrl\doc\002.docx" />
+    <Content Include="ConcurrencyCtrl\doc\003.docx" />
+    <None Include="packages.config" />
+    <Content Include="ControlBars\doc\test.docx" />
+    <Content Include="SimpleExcel\doc\test.xlsx" />
+    <Content Include="SimplePPT\doc\test.pptx" />
+    <Content Include="TitleText\doc\test.docx" />
+    <Content Include="SendParameters\doc\test.docx" />
+    <Content Include="SubmitWord\doc\test.docx" />
+    <Content Include="SubmitExcel\doc\test.xlsx" />
+    <Content Include="SimpleWord\doc\test.docx" />
+    <Content Include="SaveAsHtml\doc\test.docx" />
+    <Content Include="SaveDataAndFile\doc\test.docx" />
+    <Content Include="RevisionOnly\doc\test.docx" />
+    <Content Include="SwitchFile\doc\test1.docx" />
+    <Content Include="SwitchFile\doc\test2.docx" />
+    <Content Include="SwitchFile\doc\test3.docx" />
+    <Content Include="ReadOnly\doc\test.docx" />
+    <Content Include="SaveAsPDF\doc\test.docx" />
+    <Content Include="SetDrByUserWord\doc\test.docx" />
+    <Content Include="SetDrByUserWord2\doc\test.docx" />
+    <Content Include="SetDrByUserWord2\doc\paragraph1.docx" />
+    <Content Include="SetDrByUserWord2\doc\paragraph2.docx" />
+    <Content Include="SetXlsTableByUser\doc\test.xlsx" />
+    <Content Include="SetExcelCellBorder\doc\test.xlsx" />
+    <Content Include="SetExcelCellText\doc\test.xlsx" />
+    <Content Include="SplitWord\doc\test.docx" />
+    <Content Include="RevisionsList\doc\test.docx" />
+    <Content Include="SaveFirstPageAsImg\doc\test.docx" />
+    <Content Include="SaveAndSearch\doc\Aceoffix License Policy.docx" />
+    <Content Include="SaveAndSearch\doc\Aceoffix Product Overview.docx" />
+    <Content Include="SaveAndSearch\doc\Aceoffix Trial Limits.docx" />
+    <Content Include="SaveAndSearch\doc\Introduction to Aceoffix.docx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WordSetTable\doc\test.docx" />
+    <Content Include="WordDataTag2\doc\test.docx" />
+    <Content Include="WordDisableRight\doc\test.docx" />
+    <Content Include="WordResWord\doc\test.docx" />
+    <Content Include="WordResWord\doc\paragraph1.docx" />
+    <Content Include="WordResWord\doc\paragraph2.docx" />
+    <Content Include="WordResWord\doc\paragraph3.docx" />
+    <Content Include="WordResImage\doc\test.docx" />
+    <Content Include="WordDataTag\doc\test.docx" />
+    <Content Include="WordTable\doc\test_table.docx" />
+    <Content Include="WordResExcel\doc\test.xlsx" />
+    <Content Include="WordResExcel\doc\paragraph1.docx" />
+    <Content Include="WordResExcel\doc\paragraph2.docx" />
+    <Content Include="WordResExcel\doc\paragraph3.docx" />
+    <Content Include="WordResExcel\doc\test.docx" />
+    <Content Include="WordCompare\doc\test1.docx" />
+    <Content Include="WordCompare\doc\test2.docx" />
+    <Content Include="WordTextBox\doc\test.docx" />
+    <Content Include="WordCreateTable\doc\test.docx" />
+    <Content Include="WordDeleteRow\doc\test_table.docx" />
+    <Content Include="WordTableSetImg\doc\test_table.docx" />
+    <Content Include="WordTableBorder\doc\test_table.docx" />
+    <Content Include="WordParagraph\doc\test.docx" />
+    <Content Include="WordSalaryBill\doc\template.docx" />
+    <Content Include="WordSalaryBill\doc\test.docx" />
+    <Content Include="WordAddBKMK\doc\test.docx" />
+    <Content Include="WordLocateBKMK\doc\test.docx" />
+    <Content Include="WordGetSelection\doc\test.docx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49662</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
