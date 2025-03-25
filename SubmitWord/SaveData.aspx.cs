@@ -10,7 +10,7 @@ namespace Aceoffix7_Net.SubmitWord
         protected void Page_Load(object sender, EventArgs e)
         {
             WordDocumentReader doc = new WordDocumentReader();
-            //获取提交的数值
+
             DataRegionReader dataUserName = doc.OpenDataRegion("ACE_Name");
             DataRegionReader dataDeptName = doc.OpenDataRegion("ACE_Department");
 
