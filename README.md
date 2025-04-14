@@ -1,4 +1,6 @@
 # Aceoffix7-Net
+**Latest Version：7.1.1.1**
+
 ### 1. Introduction
 
 The Aceoffix7-Net project demonstrates how to use the Aceoffix 7.0 product under the ASP.NET framework. Note that this project only supports classic ASP.NET and does not include ASP.NET Core, .NET 5, or any subsequent versions. This project showcases nearly 90% of the functions of the Aceoffix product and serves as a demo project.
@@ -13,7 +15,7 @@ The Aceoffix7-Net project demonstrates how to use the Aceoffix 7.0 product under
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
+  [aceclientsetup_7.x.x.x.exe](https://github.com/aceoffix/aceoffix7-client/releases/)
 
 - Copy the program downloaded in the previous step to the "bin" folder of the current project. If there is no "bin" folder, create a new "bin" folder first.
 
@@ -34,7 +36,7 @@ The Aceoffix7-Net project demonstrates how to use the Aceoffix 7.0 product under
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
+  [aceclientsetup_7.x.x.x.exe](https://github.com/aceoffix/aceoffix7-client/releases/)
 
 - Copy the program downloaded in the previous step to the "bin" folder of the your web project.
 
